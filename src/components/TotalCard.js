@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 //const Table = ({times}) => {
 let Table = ({times}) => {
-console.log(times);
     let hoursFormatted = "--";
     let minutesFormatted = "--";
 
