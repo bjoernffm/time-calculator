@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './sb-admin-2.css';
+import './vendor/fontawesome-free/css/all.min.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
