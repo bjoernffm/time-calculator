@@ -12,8 +12,8 @@ const TableRow = ({hours, minutes, total, onClick}) => {
     return (<tr>
                 <td>{hoursFormatted}:{minutesFormatted}</td>
                 <td>{totalHoursFormatted}:{totalMinutesFormatted}</td>
-                <td>
-                    <button className="btn btn-danger btn-circle btn-sm" onClick={onClick}>
+                <td align="right">
+                    <button className="btn btn-secondary btn-circle btn-sm" style={{marginTop: "-3px"}} onClick={onClick}>
                         <i className="fas fa-trash"></i>
                     </button>
                 </td>

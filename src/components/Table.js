@@ -10,7 +10,7 @@ const Table = ({onRemoveClick, times}) => {
             </div>
             <div className="card-body">
                 <div className="table-responsive">
-                    <table className="table table-bordered" width="100%" cellSpacing="0">
+                    <table className="table" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
                                 <th>Time</th>
