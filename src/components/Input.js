@@ -90,6 +90,9 @@ class Input extends React.Component {
             } else if (["1", "2", "3", "4", "5"].indexOf(e.key) !== -1) {
                 this.minutesInput.current.value = e.key;
                 this.setState({ minuteInput: "FILLED_FIRST" });
+            } else if (["6"].indexOf(e.key) !== -1) {
+                this.minutesInput.current.value = e.key;
+                this.onSubmit(e);
             }
         } else if (this.state.minuteInput === "FILLED_FIRST") {
             if (["Enter"].indexOf(e.key) !== -1) {
