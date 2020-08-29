@@ -1,6 +1,7 @@
 import {
     ADD_TIME,
-    REMOVE_TIME
+    REMOVE_TIME,
+    CLEAR_TIMES
 } from '../actions/actions';
 
 const initialState = [];
@@ -62,6 +63,8 @@ function times(state = initialState, action) {
             });
 
             return newState;
+        case CLEAR_TIMES:
+            return [];
         default:
             return state;
     }

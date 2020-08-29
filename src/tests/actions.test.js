@@ -26,4 +26,12 @@ describe('actions', () => {
 
         expect(actions.removeTime(index)).toEqual(expectedAction)
     });
+
+    it('should create an action to clear all times', () => {
+        const expectedAction = {
+            type: actions.CLEAR_TIMES
+        };
+
+        expect(actions.clearTimes()).toEqual(expectedAction)
+    });
 });

@@ -181,4 +181,32 @@ describe('times reducer', () => {
             ]
         );
     });
+
+    it('should handle CLEAR_TIMES when everything is alright', () => {
+        expect(
+            reducer(
+                [
+                    {
+                        hours: 1,
+                        minutes: 32,
+                        total: {
+                            hours: 1,
+                            minutes: 32
+                        }
+                    },
+                    {
+                        hours: 1,
+                        minutes: 10,
+                        total: {
+                            hours: 2,
+                            minutes: 42
+                        }
+                    }
+                ], {
+                type: actions.CLEAR_TIMES
+            })
+        ).toEqual(
+            []
+        );
+    });
 });

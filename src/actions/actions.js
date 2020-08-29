@@ -4,6 +4,7 @@
 
 export const ADD_TIME = 'ADD_TIME';
 export const REMOVE_TIME = 'REMOVE_TIME';
+export const CLEAR_TIMES = 'CLEAR_TIMES';
 
 /*
  * action creators
@@ -25,5 +26,11 @@ export function removeTime(index) {
         payload: {
             index
         }
+    };
+}
+
+export function clearTimes() {
+    return {
+        type: CLEAR_TIMES
     };
 }

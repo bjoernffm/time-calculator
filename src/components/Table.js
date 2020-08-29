@@ -2,7 +2,7 @@ import React from 'react';
 import TableRow from './TableRow';
 import PropTypes from 'prop-types';
 
-const Table = ({onRemoveClick, times}) => {
+const Table = ({onRemoveClick, onClearAllClick, times}) => {
     return (
         <div className="card shadow mb-4">
             <div className="card-header py-3">
@@ -15,7 +15,14 @@ const Table = ({onRemoveClick, times}) => {
                             <tr>
                                 <th>Time</th>
                                 <th>Sum</th>
-                                <th></th>
+                                <th style={{textAlign: "right"}}>
+                                    {
+                                        times.length > 0 &&
+                                        <button className="btn btn-link btn-sm" style={{padding: "0"}} onClick={() => onClearAllClick()}>
+                                            clear all
+                                        </button>
+                                    }
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,7 +44,8 @@ Table.propTypes = {
             minutes: PropTypes.number.isRequired
         }).isRequired
     ).isRequired,
-    onRemoveClick: PropTypes.func.isRequired
+    onRemoveClick: PropTypes.func.isRequired,
+    onClearAllClick: PropTypes.func.isRequired
 }
 
 export default Table;
