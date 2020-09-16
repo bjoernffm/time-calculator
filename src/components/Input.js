@@ -84,18 +84,18 @@ class Input extends React.Component {
             if (["Backspace"].indexOf(e.key) !== -1 && this.hoursInput.current.value === "0") {
                 this.minutesInput.current.value = "";
                 this.setState({ minuteInput: "EMPTY" });
-            } else if (["0", "Enter"].indexOf(e.key) !== -1) {
+            } else if (["0", "Enter", "Tab"].indexOf(e.key) !== -1) {
                 this.minutesInput.current.value = "0";
                 this.onSubmit(e);
             } else if (["1", "2", "3", "4", "5"].indexOf(e.key) !== -1) {
                 this.minutesInput.current.value = e.key;
                 this.setState({ minuteInput: "FILLED_FIRST" });
-            } else if (["6"].indexOf(e.key) !== -1) {
+            } else if (["6", "7", "8", "9"].indexOf(e.key) !== -1) {
                 this.minutesInput.current.value = e.key;
                 this.onSubmit(e);
             }
         } else if (this.state.minuteInput === "FILLED_FIRST") {
-            if (["Enter"].indexOf(e.key) !== -1) {
+            if (["Enter", "Tab"].indexOf(e.key) !== -1) {
                 this.onSubmit(e);
             } else if (["Backspace"].indexOf(e.key) !== -1) {
                 this.minutesInput.current.value = "";
